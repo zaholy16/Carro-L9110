@@ -3,6 +3,7 @@
     <head>
       <!-- Utilizar la librería para poder utilizar el protocolo MQTT-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.2.6/mqtt.js"></script>
+        <link rel="stylesheet" href="styles.css">
 <script>
 
     //Conectarse a l broker mosquito
@@ -85,17 +86,21 @@ function mifuncion(direccion)
 </script>
 
 <!--Mostrar la interfaz principal de mi aplicación Web-->
-
-    <h2>Mover llantas</h2>
-    <h2>con la placa NodeMCU 8266</h2>
-   
-    <button onclick="mifuncion('avanzar')">AVANZA</button>
-    <button onclick="mifuncion('retroceder')">RETROCEDE</button>
+<div class="title">
+  <h2>Mover llantas </h2>
+  <h2>con la placa NodeMCU 8266</h2>
+</div>
+  
+<div class="canvaDiv">
+    <button onclick="mifuncion('avanzar')">AVANZAR</button>
+    <button onclick="mifuncion('retroceder')">RETROCEDER</button>
     <button onclick="mifuncion('izquierda')">IZQUIERDA</button>
     <button onclick="mifuncion('derecha')">DERECHA</button>
     <button onclick="mifuncion('detenerse')">DETENERSE</button>
-
-    <h1 id="estado"></h1>
+    <div class="console">
+      <h1 id="estado"></h1>
+    </div>
+  </div>
 
 </body>
 </html>
