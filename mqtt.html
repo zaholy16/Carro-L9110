@@ -55,27 +55,27 @@ function mifuncion(direccion)
 
     case 'avanzar':
       client.publish("mzmd/accionesMez", "avanzar");
-      document.getElementById("estado").innerHTML="Avanzando...";
+      document.getElementById("estado").innerHTML="...Avanzando...";
       break;
 
     case 'retroceder':
       client.publish("mzmd/accionesMez", "retroceder");
-      document.getElementById("estado").innerHTML="Retrocediendo...";
+      document.getElementById("estado").innerHTML="...Retrocediendo...";
       break;
 
     case 'izquierda':
       client.publish("mzmd/accionesMez", "izquierda");
-      document.getElementById("estado").innerHTML="Girando a la izquierda...";
+      document.getElementById("estado").innerHTML="...Girando a la izquierda...";
       break;
 
     case 'derecha':
       client.publish("mzmd/accionesMez", "derecha");
-      document.getElementById("estado").innerHTML="Girando a la derecha...";
+      document.getElementById("estado").innerHTML="...Girando a la derecha...";
       break;
 
     case 'detenerse':
       client.publish("mzmd/accionesMez", "detenerse");
-      document.getElementById("estado").innerHTML="DETENIDO...";
+      document.getElementById("estado").innerHTML="...DETENIDO...";
       break;
 
     default:

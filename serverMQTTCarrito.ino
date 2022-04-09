@@ -34,7 +34,7 @@ const int AIA = 12;
 const int AIB = 13;
 const int BIA = 5;
 const int BIB = 4;
-byte velocidad = 160;
+byte velocidad = 250;
 
 void setup_wifi() {
 
@@ -82,32 +82,32 @@ void callback(char* topic, byte* payload, unsigned int length) {
   if(message=="derecha")
   {
     derecha(); 
-    Serial.println("GIRANDO A LA DERECHA...");
+    Serial.println("...GIRANDO A LA DERECHA...");
   }
 
   if(message=="izquierda")
   {
     izquierda();
-    Serial.println("GIRANDO A LA IZQUIERDA");
+    Serial.println("...GIRANDO A LA IZQUIERDA");
   }
 
   if(message=="avanzar")
   {
     avanzar();
-    Serial.println("AVANZANDO...");
+    Serial.println("...AVANZANDO...");
   }
 
   if(message=="retroceder")
   {
     retroceder();
-    Serial.println("RETROCEDIENDO...");
+    Serial.println("...RETROCEDIENDO...");
   }
 
   if(message=="detenerse")
   {
     detenerse();
     delay(1000);
-    Serial.println("DETENIDO...");
+    Serial.println("...DETENIDO...");
   }
 
 }
@@ -175,31 +175,31 @@ void setup() {
 
 }
 
-void avanzar()
+void izquierda()
 {
   analogWrite(AIB, 0);
-  analogWrite(AIA, velocidad);
+  analogWrite(AIA, 120);
   analogWrite(BIA, 0);
-  analogWrite(BIB, velocidad);
-}
-
-void retroceder()
-{
-  analogWrite(AIB, velocidad);
-  analogWrite(AIA, 0);
-  analogWrite(BIA, velocidad);
-  analogWrite(BIB, 0);
+  analogWrite(BIB, 120);
 }
 
 void derecha()
 {
+  analogWrite(AIB, 120);
+  analogWrite(AIA, 0);
+  analogWrite(BIA, 120);
+  analogWrite(BIB, 0);
+}
+
+void retroceder()
+{
   analogWrite(AIA, 0);
   analogWrite(AIB, velocidad);
   analogWrite(BIA, 0);
   analogWrite(BIB, velocidad);
 }
 
-void izquierda()
+void avanzar()
 {
   analogWrite(AIA, velocidad);
   analogWrite(AIB, 0);
