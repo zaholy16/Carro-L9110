@@ -1,46 +1,55 @@
 html {
-  background-color: #f0f0f0;
-  justify-content: space-evenly;
-  display: flex;
-  margin-top: 12%;
+  scroll-behavior: smooth;
+}
+
+.arrowDown, .arrowUp, .arrowRight, .arrowLeft {
+  position: relative;
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgb(65, 65, 65);
+}
+.arrowDown::before {
+  content: "";
+  position: relative;
+  align-self: center;
+  align-items: center;
+  top: 7px;
+  left: 5px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 14px solid white;
+}
+.arrowUp::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid white;
+}
+.arrowRight::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 14px solid white;
+}
+.arrowLeft::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 14px solid white;
+}
+
+.centrar{
   text-align: center;
 }
-button {
-  margin: -10px 20px -3px 40px;
-  border-width: 0px;
-  border-radius: 25px;
-  width: 150px;
-  height: 80px;
-  background: #f0f0f0;
-  box-shadow:  5px 5px 10px #c0c0c0,
-             -5px -5px 10px #ffffff;
-}
-button:hover{
-  border-radius: 71px;
-  background: #f0f0f0;
-  box-shadow: inset 0px 0px 0px #c0c0c0,
-            inset 0px 0px 0px #ffffff;
-}
 
-button:focus{
-  border-radius: 25px;
-  background: #f0f0f0;
-  box-shadow: inset 5px 5px 10px #c0c0c0,
-            inset -5px -5px 10px #ffffff;
-}
-
-.console {
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-  margin-left: 25%;
-  width: 500px;
-  height: 90px;
-  border-radius: 19px;
-  background: #f0f0f0;
-  box-shadow: inset 11px 11px 22px #b4b4b4,
-              inset -11px -11px 22px #ffffff;
-}
-.title {
-  margin-bottom: 50px;
-}

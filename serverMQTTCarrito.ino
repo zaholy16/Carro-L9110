@@ -178,16 +178,16 @@ void setup() {
 void izquierda()
 {
   analogWrite(AIB, 0);
-  analogWrite(AIA, 120);
+  analogWrite(AIA, 180);
   analogWrite(BIA, 0);
-  analogWrite(BIB, 120);
+  analogWrite(BIB, 180);
 }
 
 void derecha()
 {
-  analogWrite(AIB, 120);
+  analogWrite(AIB, 180);
   analogWrite(AIA, 0);
-  analogWrite(BIA, 120);
+  analogWrite(BIA, 180);
   analogWrite(BIB, 0);
 }
 
